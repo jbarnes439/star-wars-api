@@ -1,5 +1,6 @@
 import React from 'react'
 import Results from '../Results/Results'
+import './Search.css'
 
 export default class Search extends React.Component {
   state = {
@@ -49,19 +50,20 @@ export default class Search extends React.Component {
         touched: false
       },
     }))
+    console.log(this.state.results) 
   }
 
-  render() {
-    console.log(this.state.results)
+  render() {    
     return (
-      <div>
+      <div className='searchBar'>
         <form className='search__form' onSubmit={e => this.handleSearchSubmit(e)}>
-          <label htmlFor='searchCriteria'>Your Star Wars knowledge awaits...</label>
+          <span htmlFor='searchCriteria'>Your Star Wars knowledge awaits...</span>
           <input
             type='text'
             className='search__form'
             name='searchValue'
             id='searchValue'
+            placeholder='Search Here'
             value={this.state.searchValue.searchValue}            
             onChange={e => this.handleInputChange(e)}
           />

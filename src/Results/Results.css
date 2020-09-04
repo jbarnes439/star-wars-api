@@ -1,0 +1,11 @@
+.li-name {
+  display: flex;
+  justify-content: center;
+  list-style-type: none;
+  padding: 10px 20px;
+  margin: 0 0 10px 0;
+}
+
+li {
+  list-style-type: none;
+}
