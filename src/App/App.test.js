@@ -1,21 +1,21 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import renderer from 'react-test-renderer';
-import Header from './Header';
+import App from './App';
 
 
-describe('Header Component', () => {
+describe('App Component', () => {
   //test cases go here
 
   it('renders without crashing', () => {
     const div = document.createElement('div');
-    ReactDOM.render(<Header />, div);
+    ReactDOM.render(<App />, div);
     ReactDOM.unmountComponentAtNode(div);
   });
 
   it('renders the UI as expected', () => {
     const tree = renderer
-    .create(<Header />)
+    .create(<App />)
     .toJSON();
     expect(tree).toMatchSnapshot();
   });
